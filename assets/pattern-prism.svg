@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <title>ClarityWorks prism motif</title>
+  <g fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.9">
+    <circle cx="300" cy="300" r="280"></circle>
+    <circle cx="300" cy="300" r="220"></circle>
+    <circle cx="300" cy="300" r="160"></circle>
+    <circle cx="300" cy="300" r="100"></circle>
+    <path d="M 420 180 A 170 170 0 1 0 420 420" stroke-width="2.4" stroke-linecap="round"></path>
+  </g>
+  <circle cx="420" cy="180" r="10" fill="#2B5BFF"></circle>
+</svg>

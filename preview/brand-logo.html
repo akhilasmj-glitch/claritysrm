@@ -1,0 +1,36 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:var(--cream-50);}
+  .wrap{padding:28px 32px;display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .panel{padding:32px;border-radius:8px;border:1px solid var(--line-warm);display:flex;align-items:center;justify-content:center;}
+  .light{background:#FBF7ED}
+  .dark{background:#0A1735;border-color:#1F2D4A}
+  .panel svg{width:280px;height:auto;}
+  .lbl{position:absolute;font-family:var(--font-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-500);margin:12px;}
+  .panel{position:relative;}
+  .dark .lbl{color:#A8B3CC;}
+</style></head>
+<body><div class="wrap">
+  <div class="panel light">
+    <span class="lbl">Wordmark</span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 64">
+      <g transform="translate(8 8)">
+        <circle cx="24" cy="24" r="23" fill="none" stroke="#0A1735" stroke-width="1.5"/>
+        <path d="M 36 14 A 16 16 0 1 0 36 34" fill="none" stroke="#0A1735" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="36" cy="14" r="2.4" fill="#2B5BFF"/>
+      </g>
+      <text x="68" y="42" font-family="Instrument Serif, Georgia, serif" font-size="34" fill="#0A1735" letter-spacing="-0.5">Clarity<tspan font-style="italic" fill="#2B5BFF">Works</tspan></text>
+    </svg>
+  </div>
+  <div class="panel dark">
+    <span class="lbl">Inverse</span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 64">
+      <g transform="translate(8 8)">
+        <circle cx="24" cy="24" r="23" fill="none" stroke="#FBF7ED" stroke-width="1.5"/>
+        <path d="M 36 14 A 16 16 0 1 0 36 34" fill="none" stroke="#FBF7ED" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="36" cy="14" r="2.4" fill="#4A75FF"/>
+      </g>
+      <text x="68" y="42" font-family="Instrument Serif, Georgia, serif" font-size="34" fill="#FBF7ED" letter-spacing="-0.5">Clarity<tspan font-style="italic" fill="#4A75FF">Works</tspan></text>
+    </svg>
+  </div>
+</div></body></html>

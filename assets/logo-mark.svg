@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <title>ClarityWorks mark</title>
+  
+  <g transform="translate(50 50)">
+    <g>
+      <path d="M 6 -4 C 26 -8, 34 -24, 22 -42 C 8 -32, -6 -16, 6 -4 Z" fill="#0A1735"></path>
+    </g>
+    <g transform="rotate(90)">
+      <path d="M 6 -4 C 26 -8, 34 -24, 22 -42 C 8 -32, -6 -16, 6 -4 Z" fill="#2B5BFF"></path>
+    </g>
+    <g transform="rotate(180)">
+      <path d="M 6 -4 C 26 -8, 34 -24, 22 -42 C 8 -32, -6 -16, 6 -4 Z" fill="#0A1735"></path>
+    </g>
+    <g transform="rotate(270)">
+      <path d="M 6 -4 C 26 -8, 34 -24, 22 -42 C 8 -32, -6 -16, 6 -4 Z" fill="#122347"></path>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 64" width="360" height="64">
+  <title>ClarityWorks wordmark (inverse)</title>
+  <g>
+    <g transform="translate(8 8)">
+      <circle cx="24" cy="24" r="23" fill="none" stroke="#FBF7ED" stroke-width="1.5"></circle>
+      <path d="M 36 14 A 16 16 0 1 0 36 34" fill="none" stroke="#FBF7ED" stroke-width="2.5" stroke-linecap="round"></path>
+      <circle cx="36" cy="14" r="2.4" fill="#4A75FF"></circle>
+    </g>
+    <text x="68" y="42" font-family="Instrument Serif, Georgia, serif" font-size="34" fill="#FBF7ED" letter-spacing="-0.5">Clarity<tspan font-style="italic" fill="#4A75FF">Works</tspan></text>
+  </g>
+</svg>

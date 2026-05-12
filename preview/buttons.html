@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:var(--cream-50);}
+  .wrap{padding:32px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px 18px;align-items:center;}
+  .lbl{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-500);grid-column:1/-1;margin-top:6px;}
+  button{font-family:var(--font-body);font-size:14px;font-weight:500;padding:11px 18px;border-radius:4px;border:1px solid transparent;cursor:pointer;display:inline-flex;align-items:center;gap:8px;letter-spacing:.005em;line-height:1;}
+  .primary{background:#2B5BFF;color:#fff;}
+  .primary:hover{background:#1A47F0;}
+  .secondary{background:#0A1735;color:#FBF7ED;}
+  .ghost{background:transparent;color:#0C1220;border-color:#0C1220;}
+  .ghost:hover{background:#0C1220;color:#FBF7ED;}
+  .tertiary{background:transparent;color:#0C1220;padding-left:0;padding-right:0;}
+  .tertiary:hover{color:#1A47F0;}
+  .tertiary u{text-decoration-thickness:1px;text-underline-offset:5px;text-decoration-color:#2B5BFF;}
+  .arr{width:14px;height:14px;}
+</style></head>
+<body><div class="wrap">
+  <span class="lbl">Primary</span>
+  <span class="lbl">Secondary (inverse)</span>
+  <span class="lbl">Ghost</span>
+  <button class="primary">Book a discovery call <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+  <button class="secondary">See our approach</button>
+  <button class="ghost">Read case study</button>
+  <span class="lbl" style="margin-top:18px">Tertiary link</span>
+  <span class="lbl" style="margin-top:18px">On dark</span>
+  <span class="lbl" style="margin-top:18px">Hover state</span>
+  <button class="tertiary"><u>Read the engagement model</u> →</button>
+  <div style="background:#0A1735;padding:14px;border-radius:6px;"><button class="primary">Book a discovery call →</button></div>
+  <button class="primary" style="background:#1A47F0">Book a discovery call →</button>
+</div></body></html>

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>ClarityWorks — From business function to built solution</title>
+  <link rel="stylesheet" href="../../colors_and_type.css"/>
+  <link rel="icon" type="image/svg+xml" href="../../assets/logo-mark.svg"/>
+  <style>
+    html, body { margin: 0; background: var(--cream-50); color: var(--ink-900); }
+    body { font-family: var(--font-body); }
+    *, *::before, *::after { box-sizing: border-box; }
+    ::selection { background: var(--blue-500); color: #fff; }
+
+    /* ── Reveal-on-scroll: 12px translate-Y + opacity, once, no bounce ── */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(12px);
+      transition:
+        opacity 620ms cubic-bezier(0.22, 0.61, 0.36, 1),
+        transform 620ms cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+    [data-reveal].is-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Hero entrance: staggered on load ── */
+    .hero-stagger > * {
+      opacity: 0;
+      transform: translateY(14px);
+      animation: heroIn 720ms cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+    }
+    .hero-stagger > *:nth-child(1) { animation-delay: 60ms; }
+    .hero-stagger > *:nth-child(2) { animation-delay: 180ms; }
+    .hero-stagger > *:nth-child(3) { animation-delay: 320ms; }
+    .hero-stagger > *:nth-child(4) { animation-delay: 460ms; }
+    .hero-stagger > *:nth-child(5) { animation-delay: 600ms; }
+    @keyframes heroIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Nav link underline draw on hover ── */
+    .nav-link { position: relative; padding-bottom: 4px; }
+    .nav-link::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: 0;
+      height: 1px; background: var(--blue-500);
+      transform: scaleX(0); transform-origin: left center;
+      transition: transform 280ms cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+    .nav-link:hover::after { transform: scaleX(1); }
+
+    /* ── Underlined "Read the case" links ── */
+    .case-link { position: relative; }
+    .case-link svg { transition: transform 220ms cubic-bezier(0.22, 0.61, 0.36, 1); }
+    .case-link:hover svg { transform: translate(2px, -2px); }
+
+    /* ── Logo prism: very slow rotate of the dot orbit, ambient ── */
+    @keyframes orbit { to { transform: rotate(360deg); } }
+
+    /* ── Respect reduced motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      [data-reveal], [data-reveal].is-in { opacity: 1; transform: none; transition: none; }
+      .hero-stagger > * { opacity: 1; transform: none; animation: none; }
+    }
+  </style>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="image-slot.js"></script>
+  <script type="text/babel" src="Primitives.jsx"></script>
+  <script type="text/babel" src="Navbar.jsx"></script>
+  <script type="text/babel" src="Hero.jsx"></script>
+  <script type="text/babel" src="StatsBand.jsx"></script>
+  <script type="text/babel" src="Services.jsx"></script>
+  <script type="text/babel" src="EngagementProcess.jsx"></script>
+  <script type="text/babel" src="CaseStudies.jsx"></script>
+  <script type="text/babel" src="ClientsBand.jsx"></script>
+  <script type="text/babel" src="TeamBand.jsx"></script>
+  <script type="text/babel" src="Insights.jsx"></script>
+  <script type="text/babel" src="Differentiators.jsx"></script>
+  <script type="text/babel" src="ContactCTA.jsx"></script>
+  <script type="text/babel" src="Footer.jsx"></script>
+
+  <script type="text/babel">
+    function App() {
+      React.useEffect(() => {
+        // Tag hero direct children for staggered entrance
+        const heroContainer = document.querySelector("main section:first-of-type > div");
+        if (heroContainer) heroContainer.classList.add("hero-stagger");
+
+        // Tag everything else for scroll reveal
+        const targets = [
+          ...document.querySelectorAll("main section:not(:first-of-type) > div"),
+          ...document.querySelectorAll("footer > div > div"),
+        ];
+        // For sections with grids of cards, also tag children for stagger
+        targets.forEach(el => el.setAttribute("data-reveal", ""));
+
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              e.target.classList.add("is-in");
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+        targets.forEach(el => io.observe(el));
+
+        // Tag nav links for underline animation
+        document.querySelectorAll("nav a[href^='#']").forEach(a => a.classList.add("nav-link"));
+        // Tag case-study read links
+        document.querySelectorAll("article a").forEach(a => a.classList.add("case-link"));
+        return () => io.disconnect();
+      }, []);
+
+      return (
+        <>
+          <Navbar/>
+          <main>
+            <Hero/>
+            <StatsBand/>
+            <Services/>
+            <CaseStudies/>
+            <EngagementProcess/>
+            <ClientsBand/>
+            <TeamBand/>
+            <Insights/>
+            <Differentiators/>
+            <ContactCTA/>
+          </main>
+          <Footer/>
+        </>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 72" width="380" height="72">
+  <title>ClarityWorks wordmark</title>
+  <g transform="translate(6 6)">
+    <svg x="0" y="0" width="60" height="60" viewBox="0 0 100 100">
+      <g transform="translate(50 50)">
+        <path d="M 6 -4 C 26 -8, 34 -24, 22 -42 C 8 -32, -6 -16, 6 -4 Z" fill="#0A1735"></path>
+        <g transform="rotate(90)"><path d="M 6 -4 C 26 -8, 34 -24, 22 -42 C 8 -32, -6 -16, 6 -4 Z" fill="#2B5BFF"></path></g>
+        <g transform="rotate(180)"><path d="M 6 -4 C 26 -8, 34 -24, 22 -42 C 8 -32, -6 -16, 6 -4 Z" fill="#0A1735"></path></g>
+        <g transform="rotate(270)"><path d="M 6 -4 C 26 -8, 34 -24, 22 -42 C 8 -32, -6 -16, 6 -4 Z" fill="#122347"></path></g>
+      </g>
+    </svg>
+  </g>
+  <text x="78" y="48" font-family="Instrument Serif, Georgia, serif" font-size="38" fill="#0A1735" letter-spacing="-0.5">Clarity<tspan font-style="italic" fill="#2B5BFF">Works</tspan></text>
+</svg>

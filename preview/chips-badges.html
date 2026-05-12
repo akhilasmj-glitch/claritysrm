@@ -1,0 +1,31 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:var(--cream-50);}
+  .wrap{padding:30px 32px;display:flex;flex-direction:column;gap:14px;}
+  .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
+  .chip{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:6px 10px;border-radius:999px;display:inline-flex;align-items:center;gap:6px;border:1px solid currentColor;}
+  .chip.solid{background:#0A1735;color:#FBF7ED;border-color:#0A1735;}
+  .chip.cream{background:#F5EFDE;color:#2A3346;border-color:transparent;}
+  .chip.accent{background:#E1E8FF;color:#1A47F0;border-color:transparent;}
+  .chip.success{background:#E5F4EC;color:#1F8A5B;border-color:transparent;}
+  .chip.warn{background:#FBF1DC;color:#B07418;border-color:transparent;}
+  .dot{width:6px;height:6px;border-radius:50%;background:currentColor;}
+  .lbl{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-500);min-width:90px;}
+</style></head>
+<body><div class="wrap">
+  <div class="row"><span class="lbl">Default</span>
+    <span class="chip"><span class="dot"></span> Construction</span>
+    <span class="chip"><span class="dot"></span> Financial services</span>
+    <span class="chip"><span class="dot"></span> Education</span>
+  </div>
+  <div class="row"><span class="lbl">Tonal</span>
+    <span class="chip cream">Workshop · 2 hrs</span>
+    <span class="chip accent">Active pilot</span>
+    <span class="chip success">Delivered</span>
+    <span class="chip warn">In review</span>
+  </div>
+  <div class="row"><span class="lbl">Inverse</span>
+    <span class="chip solid"><span class="dot"></span> Sydney NSW</span>
+    <span class="chip solid">A ClaritySRM company</span>
+  </div>
+</div></body></html>
